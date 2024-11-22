@@ -77,6 +77,7 @@ module.exports = {
     extend: {
       backgroundImage:{
         'navbar-bg': "url('/public/navbar.svg')",
+        'info-bg': "url('/public/info.svg')"
       }
   },  
   },
