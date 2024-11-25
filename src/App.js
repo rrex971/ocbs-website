@@ -6,11 +6,12 @@ import Home from './screens/Home';
 import Mappools from './screens/Mappools'
 import Info from './screens/Info'
 import Staff from './screens/Staff'
+import Footer from './components/Footer';
 
 const App = () => {
   return (
     <Router>
-      <div className='bg-lilac-500 text-logan-900'>
+      <div className='bg-logan-500 text-logan-900'>
         <Navbar />
         <Routes> 
           <Route path="/" exact element={<Home />} />
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/mappools" element={<Mappools />} /> 
           <Route path="/staff" element={<Staff />} /> 
         </Routes>
+        <Footer />
       </div>
     </Router>
   );

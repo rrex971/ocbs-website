@@ -73,13 +73,26 @@ module.exports = {
     },
     fontFamily : {
       head: ["DelaSuko", "sans-serif"],
+      body: ["Satoshi", "sans-serif"]
     },
     extend: {
       backgroundImage:{
         'navbar-bg': "url('/public/navbar.svg')",
-        'info-bg': "url('/public/info.svg')"
-      }
-  },  
+        'info-bg': "url('/public/infobg.svg')"
+      },
+      keyframes: {
+        appear: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+       },
+       animation: {
+         appear: "appear 0.5s ease-in-out"
+       }
+    }
   },
   plugins: [],
-}
+}}

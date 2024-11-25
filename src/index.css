@@ -6,3 +6,9 @@
   font-family: "DelaSuko";
   src: url("../public/fonts/DelaSukoGothicOne-R.ttf");
 }
+
+@font-face {
+  font-family: "Satoshi";
+  font-weight: 600;
+  src: url("../public/fonts/Satoshi-Variable.woff2");
+}
