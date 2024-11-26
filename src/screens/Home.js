@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return(
-    <div className='bg-logan-500 bg-home-bg-sm bg-right-top md:bg-left-top md:bg-home-bg bg-no-repeat md:bg-cover md:h-screen '>
+    <div className='bg-logan-500 bg-home-bg-sm bg-right-top md:bg-left-top md:bg-home-bg bg-no-repeat md:bg-cover md:h-full '>
       <div className="titlecontainer mx-auto my-auto pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center ">
         <div className='titletext'>
           <div className='titlecontent font-head pt-20 pb-5'>
@@ -22,7 +22,7 @@ const Home = () => {
           </div> 
         </div>
       </div>
-      <div className='gallerycontainer mx-auto my-auto mt-16 lg:mt-64 mb-48 px-12 md:px-48 min-h-128 justify-between items-center'>
+      <div className='gallerycontainer mx-auto my-auto mt-16 lg:mt-72 mb-48 px-12 md:px-48 min-h-96 justify-between items-center'>
         <div className="galleryText font-head">
           <span className='text-4xl md:text-6xl text-banana-mania-100'>Gallery</span>
         </div>
