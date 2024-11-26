@@ -78,7 +78,9 @@ module.exports = {
     extend: {
       backgroundImage:{
         'navbar-bg': "url('/public/navbar.svg')",
-        'info-bg': "url('/public/infobg.svg')"
+        'info-bg': "url('/public/infobg.svg')",
+        'home-bg': "url('/public/homebg.svg')",
+        'home-bg-sm': "url('/public/homebg_sm.svg')"
       },
       keyframes: {
         appear: {
