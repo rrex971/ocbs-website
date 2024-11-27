@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaAngleRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
   return(
@@ -23,7 +23,7 @@ const Home = () => {
             The event will be a part of the largest osu! meetup in the city.
           </div>
           <Link to="/register">
-              <button className='rounded-full bg-banana-mania-100 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 '>Register <FaAngleRight className='inline' /></button>
+              <button className='rounded-full bg-banana-mania-100 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 '>Register <FaArrowRight className='inline relative -top-0.5' /></button>
           </Link> 
         </div>
       </div>
