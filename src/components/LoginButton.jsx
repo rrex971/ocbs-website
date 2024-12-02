@@ -1,6 +1,11 @@
 import React from "react";
 
 const LoginButton = () => {
+    const handleLogin = async () => {
+        const clientId = process.env.get('CLIENT_ID');
+        const clientSecret = process.env.get('CLIENT_SECRET');
+        const redirectUri = process.env.get('REDIRECT_URI');
+    };
     return(
     <button className="rounded-full font-body font-bold text-xl text-logan-700 bg-banana-mania-100 opacity-75 hover:bg-banana-mania-50 transition-colors duration-300 ease-in-out px-2 py-2">
         <div className='flex justify-between items-center space-x-2'>
