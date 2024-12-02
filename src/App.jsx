@@ -8,6 +8,7 @@ import Info from './screens/Info'
 import Staff from './screens/Staff'
 import Footer from './components/Footer';
 import Register from './screens/Register';
+import Login from './screens/Login';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/mappools" element={<Mappools />} />
           <Route path="/staff" element={<Staff />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
         <Footer />
       </div>
