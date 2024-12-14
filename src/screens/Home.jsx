@@ -1,8 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 
 const Home = () => {
+  const navigate = useNavigate();
   return(
     <div className='bg-logan-500 bg-home-bg bg-right-top md:bg-left-top md:bg-home-bg bg-no-repeat md:bg-cover md:h-full '>
       <div className="titlecontainer mx-auto my-auto pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center ">
@@ -28,16 +29,20 @@ const Home = () => {
             <span className='text-banana-mania-100 font-bold italic'> rrex</span>.
             The event will be a part of the largest osu! meetup in the city.
           </div>
-          <Link to="/register">
-              <button className='rounded-full bg-banana-mania-100 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 '>Register <FaArrowRight className='inline relative -top-0.5' /></button>
-          </Link> 
+          <button className='rounded-full bg-banana-mania-100 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 ' onClick={() => {
+            if (localStorage.getItem('api_id')) {
+              navigate('/register');
+            } else {
+              alert('Please log in first');
+            }
+          }}>Register <FaArrowRight className='inline relative -top-0.5' /></button> 
         </div>
       </div>
       <div className='gallerycontainer mx-auto my-auto mt-16 lg:mt-72 mb-48 px-12 md:px-48 min-h-96 justify-between items-center'>
         <div className="galleryText font-head">
           <span className='text-4xl md:text-6xl text-banana-mania-100'>Gallery</span>
         </div>
-      <div className='galleryImages mt-16 flex flex-col justify-between items-center block'>
+      <div className='galleryImages mt-16 flex flex-col justify-between items-center'>
         <img src={"checklater.svg"} alt='The event has not yet concluded. Check back later.'></img>
       </div>
     </div>
