@@ -1,7 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
-import *  as osu from "osu-api-v2-js";
 import { NinetyRingWithBg } from "react-svg-spinners";
 
 const Login = () => {

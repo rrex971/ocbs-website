@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { generateAuthorizationURL } from "osu-api-v2-js";
+
 
 const LoginButton = () => {
     const api_id = localStorage.getItem('api_id');
     const [showDropdown, setShowDropdown] = useState(false);
     const handleLogin = async () => {
-        const clientId = import.meta.env.VITE_CLIENT_ID;
-        const redirectUri = import.meta.env.VITE_REDIRECT_URI;
-        const url = generateAuthorizationURL(clientId, redirectUri, ["public", "identify"])
+        // for dev purposes
+        // const url = 'https://osu.ppy.sh/oauth/authorize/?client_id=36453&redirect_uri=http://localhost:5173/login&response_type=code&scope=public%20identify';
+        const url = 'https://osu.ppy.sh/oauth/authorize/?client_id=36453&redirect_uri=https://ocbs.rrex.cc/login&response_type=code&scope=public%20identify';
         window.location.href = url;
     };
     const handleLogout = () => {
