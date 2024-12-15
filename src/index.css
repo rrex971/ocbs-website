@@ -4,10 +4,10 @@
 
 @font-face {
   font-family: "DelaSuko";
-  src: url("../public/fonts/DelaSukoGothicOne-R.ttf");
+  src: url("../fonts/DelaSukoGothicOne-R.ttf");
 }
 
 @font-face {
   font-family: "Satoshi";
-  src: url("../public/fonts/Satoshi-Variable.woff2");
+  src: url("../fonts/Satoshi-Variable.woff2");
 }
