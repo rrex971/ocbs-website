@@ -21,7 +21,7 @@ const Login = () => {
                     console.log('Generated base64String:', base64String);
 
                     try {
-                        const response = await fetch(`http://localhost:6969/loginFlow?apiId=${base64String}&code=${code}`, {
+                        const response = await fetch(`http://ocbs.rrex.cc/api/loginFlow?apiId=${base64String}&code=${code}`, {
                             method: 'GET',
                             headers: {
                                 'Access-Control-Allow-Origin':'*',
