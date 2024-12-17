@@ -32,9 +32,9 @@ const LoginButton = () => {
                 <img src={api_id!=null ? localStorage.getItem('avatar') : 'osulogo.svg'} alt="osu logo" width={35} className='inline rounded-full'></img>
                 <span className='hidden md:inline pr-2 relative -top-0.25'>{api_id ? localStorage.getItem('username') : 'Login'}</span>
             </div>
-            <div className={`absolute w-full mt-4 -left-0 bg-banana-mania-100 p-3 rounded-2xl transition-all duration-300 ease-in-out ${showDropdown ? '' : 'hidden'}`}>
-                <button onClick={handleLogout} className="text-logan-700 hover:text-logan-500 transition-colors duration-300 ease-in-out">Logout</button>
-            </div>
+            <button onClick={handleLogout} className={`absolute w-full mt-4 -left-0 bg-banana-mania-100 p-3 rounded-2xl transition-all duration-300 ease-in-out hover:bg-banana-mania-50 ${showDropdown ? '' : 'hidden'}`}>
+                Logout
+            </button>
         </button>
 
     </div>
