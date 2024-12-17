@@ -81,7 +81,8 @@ export default {
         'navbar-bg': "url('/public/navbar.svg')",
         'info-bg': "url('/public/infobg.svg')",
         'home-bg': "url('/public/homebg.svg')",
-        'home-bg-sm': "url('/public/homebg_sm.svg')"
+        'home-bg-sm': "url('/public/homebg_sm.svg')",
+        'register-bg': "url('/public/registerbg.svg')",
       },
       keyframes: {
         appear: {
