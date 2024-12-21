@@ -11,6 +11,8 @@ import Register from './screens/Register';
 import Login from './screens/Login';
 import Players from './screens/Players';
 import Payment from './screens/Payment';
+import PaymentConfirmation from './screens/PaymentConfirmation';
+import NotFound from './screens/NotFound';
 
 const App = () => {
   return (
@@ -24,8 +26,10 @@ const App = () => {
           <Route path="/staff" element={<Staff />} />
           <Route path="/register" element={<Register />} />
           <Route path="/register/payment" element={<Payment />} />
+          <Route path="/register/payment/confirmation" element={<PaymentConfirmation />} />
           <Route path="/players" element={<Players />} />
           <Route path="/login" element={<Login />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>

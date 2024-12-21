@@ -17,9 +17,7 @@ const Payment = () => {
             <div className="flex justify-center items-center space-x-2 md:space-x-4 m-16">
                 <img src="../UPI.png" className="" alt="UPI QRCode" width='300' />
             </div>
-            <RegisterButton message="Continue " path="/"/> // TODO: navigate to payment confirmation status page. 
-
-
+            <RegisterButton message="Continue " path="confirmation"/> 
     </div>
 )};
 
