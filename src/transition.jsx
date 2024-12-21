@@ -5,7 +5,7 @@ const transition = (OrigComponent) => {
     return (props) => (
         <>
             <motion.div
-                className="w-full h-lvh origin-bottom"
+                className="w-full h-screen origin-bottom"
                 initial={{ y: 10, opacity: 0}}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 10, opacity: 0 }}

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <nav className="bg-logan-500 bg-cover mt-48 p-8 md:p-16 rounded-b-xl">
+    <nav className="bg-logan-500 bg-cover mt-96 p-8 md:p-16 rounded-b-xl">
         <div className="container mx-auto flex justify-between items-center">
             <div className="text-banana-mania-100 text-sm md:text-2xl font-body">
                 <span className='font-head block'>osu!Chennai Beachside Showdown</span>
