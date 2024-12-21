@@ -1,9 +1,31 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
+import { Slide, toast } from 'react-toastify';
+
 
 const Home = () => {
   const navigate = useNavigate();
+  const [registered, setRegistered] = useState(false);
+  useEffect(() => {
+    const fetchUserExists = async () => {
+      const userId = localStorage.getItem('userId');
+      if (userId) {
+        try {
+          const response = await fetch(`https://ocbs.rrex.cc/api/userExists?userId=${userId}`);
+          const result = await response.json();
+          if (response.ok) {
+            setRegistered(result);
+          } else {
+            console.error('Failed to fetch user exists:', response.statusText);
+          }
+        } catch (error) {
+          console.error('Error fetching user exists:', error);
+        }
+      }
+    }
+    fetchUserExists();
+  })
   return(
     <div className='bg-logan-500 bg-home-bg bg-right-top md:bg-left-top md:bg-home-bg bg-no-repeat md:bg-cover md:h-full '>
       <div className="titlecontainer mx-auto my-auto pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center ">
@@ -29,13 +51,31 @@ const Home = () => {
             <span className='text-banana-mania-100 font-bold italic'> rrex</span>.
             The event will be a part of the largest osu! meetup in the city.
           </div>
-          <button className='rounded-full bg-banana-mania-100 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 ' onClick={() => {
+          <button className='rounded-full bg-banana-mania-100 hover:bg-banana-mania-50 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 transition-colors duration-300 ease-in-out' onClick={() => {
             if (localStorage.getItem('api_id')) {
               navigate('/register');
-            } else {
-              alert('Please log in first');
+            } else if (registered) {
+              navigate('/register/payment/confirmation')
+            } 
+            else {
+              toast(<div className='font-body font-medium text-lg text-logan-700 bg-banana-mania-100 rounded-full p-4 flex items-center'>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                  <span>Please login first to register</span>
+                </div>, {
+                position: "top-right",
+                closeButton: false,
+                autoClose: 2000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                className: "p-0 rounded-full bg-banana-mania-100",
+                transition: Slide,}
+              );
             }
-          }}>Register <FaArrowRight className='inline relative -top-0.5' /></button> 
+          }}>{registered ? "Check registration payment status" : "Register"} <FaArrowRight className='inline relative -top-0.5' /></button> 
         </div>
       </div>
       <div className='gallerycontainer mx-auto my-auto mt-16 lg:mt-72 mb-48 px-12 md:px-48 min-h-96 justify-between items-center'>

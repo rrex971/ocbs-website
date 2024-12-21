@@ -13,12 +13,14 @@ import Players from './screens/Players';
 import Payment from './screens/Payment';
 import PaymentConfirmation from './screens/PaymentConfirmation';
 import NotFound from './screens/NotFound';
+import { ToastContainer } from 'react-toastify';
 
 const App = () => {
   return (
     <Router>
       <div className='bg-logan-500 text-logan-900'>
         <Navbar />
+        <ToastContainer />
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/info" element={<Info />} />
