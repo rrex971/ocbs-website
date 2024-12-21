@@ -30,7 +30,9 @@ const Home = () => {
     };
     fetchUserExists();
   });
-
+  if(loading){
+    return <LoadingScreen />;
+  }
   return (
     <div className="bg-logan-500 bg-home-bg bg-right-top md:bg-left-top md:bg-home-bg md:bg-cover md:min-h-screen">
       <div className="titlecontainer pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center">
