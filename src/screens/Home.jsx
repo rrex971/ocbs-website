@@ -2,11 +2,13 @@ import {React, useEffect, useState} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import { Slide, toast } from 'react-toastify';
+import LoadingScreen from './LoadingScreen';
 
 
 const Home = () => {
   const navigate = useNavigate();
   const [registered, setRegistered] = useState(false);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchUserExists = async () => {
       const userId = localStorage.getItem('userId');
@@ -23,9 +25,14 @@ const Home = () => {
           console.error('Error fetching user exists:', error);
         }
       }
+      setLoading(false);
     }
     fetchUserExists();
   })
+
+  if(loading){
+    return <LoadingScreen />;
+  }
   return(
     <div className='bg-logan-500 bg-home-bg bg-right-top md:bg-left-top md:bg-home-bg bg-no-repeat md:bg-cover md:h-full '>
       <div className="titlecontainer mx-auto my-auto pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center ">

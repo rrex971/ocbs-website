@@ -2,9 +2,10 @@ import React from "react";
 import RegisterButton from "../components/RegisterButton";
 import { useEffect, useState } from "react";
 import { FaCheckCircle, FaClock } from "react-icons/fa";
-
+import LoadingScreen from "./LoadingScreen";
 const PaymentConfirmation = () => {
     const [paymentStatus, setPaymentStatus] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchPaymentStatus = async () => {
@@ -21,11 +22,16 @@ const PaymentConfirmation = () => {
             } catch (error) {
                 console.error('Error fetching payment status:', error);
             }
+            setLoading(false);
         };
-
+        
         fetchPaymentStatus();
     }, []);
     
+    if(loading){
+        return <LoadingScreen />;
+    }
+
     return (
         <div className="register-info bg-register-bg bg-left-top bg-cover md:h-screen">
             <div className="flex justify-center items-center pt-24 space-x-8 font-head text-4xl text-logan-700">
