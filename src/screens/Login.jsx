@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { NinetyRingWithBg } from "react-svg-spinners";
+import transition from "../transition";
 
 const Login = () => {
     const location = useLocation(); 
@@ -63,4 +64,4 @@ const Login = () => {
         </div>
 )};
 
-export default Login;
+export default transition(Login);

@@ -1,4 +1,5 @@
 import React from 'react';
+import transition from '../transition';
 
 const Players = () => {
   return <div className='flex justify-center items-center h-screen'>
@@ -6,4 +7,4 @@ const Players = () => {
   </div>;
 };
 
-export default Players;
+export default transition(Players); 

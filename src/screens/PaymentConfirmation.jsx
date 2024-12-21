@@ -3,6 +3,7 @@ import RegisterButton from "../components/RegisterButton";
 import { useEffect, useState } from "react";
 import { FaCheckCircle, FaClock } from "react-icons/fa";
 import LoadingScreen from "./LoadingScreen";
+import transition from "../transition";
 const PaymentConfirmation = () => {
     const [paymentStatus, setPaymentStatus] = useState(false);
     const [loading, setLoading] = useState(true);
@@ -48,4 +49,4 @@ const PaymentConfirmation = () => {
     );
 };
 
-export default PaymentConfirmation;
+export default transition(PaymentConfirmation);

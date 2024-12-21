@@ -1,4 +1,5 @@
 import React from "react";
+import transition from "../transition";
 
 const NotFound = () => {
     return (
@@ -12,4 +13,4 @@ const NotFound = () => {
     );
 };
 
-export default NotFound;
+export default transition(NotFound);

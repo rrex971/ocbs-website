@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaArrowRight } from "react-icons/fa";
 import { Slide, toast } from 'react-toastify';
 import LoadingScreen from './LoadingScreen';
-
+import transition from '../transition';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -97,4 +97,5 @@ const Home = () => {
   );    
 };
 
-export default Home;
+
+export default transition(Home);
