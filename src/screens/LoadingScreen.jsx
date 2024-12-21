@@ -1,5 +1,7 @@
 import React from "react";
 import { NinetyRingWithBg } from "react-svg-spinners";
+import transition from "../transition";
+
 const LoadingScreen = () => {
     return (
             <div className="flex justify-center items-center space-x-10 h-screen font-head text-4xl text-logan-600">
@@ -8,4 +10,4 @@ const LoadingScreen = () => {
     )
 }
 
-export default LoadingScreen;
+export default transition(LoadingScreen);
