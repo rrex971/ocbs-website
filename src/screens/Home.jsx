@@ -52,11 +52,11 @@ const Home = () => {
             The event will be a part of the largest osu! meetup in the city.
           </div>
           <button className='rounded-full bg-banana-mania-100 hover:bg-banana-mania-50 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 transition-colors duration-300 ease-in-out' onClick={() => {
-            if (localStorage.getItem('api_id')) {
-              navigate('/register');
-            } else if (registered) {
+            if (registered) {
               navigate('/register/payment/confirmation')
-            } 
+            } else if (localStorage.getItem('api_id')) {
+              navigate('/register');
+            }
             else {
               toast(<div className='font-body font-medium text-lg text-logan-700 bg-banana-mania-100 rounded-full p-4 flex items-center'>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
