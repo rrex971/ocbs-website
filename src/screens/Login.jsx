@@ -7,6 +7,9 @@ const Login = () => {
     const location = useLocation(); 
     const navigate = useNavigate();
     useEffect(() =>{
+        if(localStorage.getItem('api_id') !== null){
+            navigate('/');
+        }
         const fetchCode = async () => {
             const params = new URLSearchParams(location.search);
             const code = params.get('code');
@@ -22,6 +25,7 @@ const Login = () => {
 
                     try {
                         const response = await fetch(`https://ocbs.rrex.cc/api/loginFlow?apiId=${base64String}&code=${code}`, {
+                        // const response = await fetch(`http://localhost:6969/api/loginFlow?apiId=${base64String}&code=${code}`, {
                             method: 'GET',
                             headers: {
                                 'Access-Control-Allow-Origin':'*',
