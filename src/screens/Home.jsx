@@ -56,15 +56,15 @@ const Home = () => {
           </div>
           <br />
           <div className="font-body font-medium text-white-50 text-lg md:text-2xl md:max-w-md pr-10 block">
-            osu!Chennai Beachside Showdown is a
+            osu!Chennai Beachside Showdown is a&nbsp;
             <span className="text-banana-mania-100 font-extrabold">
-              one-day, Battle Royale LAN
+              one-day, Battle Royale LAN&nbsp;
             </span>
             tournament in the heart of
             <span className="text-banana-mania-100 font-bold italic">
               Chennai
             </span>
-            , hosted by <span className="text-banana-mania-100 font-bold italic">Raybean</span>
+            , hosted by <span className="text-banana-mania-100 font-bold italic">Raybean&nbsp;</span>
             and <span className="text-banana-mania-100 font-bold italic">rrex</span>.
             The event will be a part of the largest osu! meetup in the city.
           </div>
