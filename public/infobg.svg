@@ -1,16 +1,1 @@
-<svg width="1440" height="906" viewBox="0 0 1440 906" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_7_625)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M0 906C217.436 829.249 622.364 658.333 799.571 479.545C871.224 407.252 911.104 336.274 947.356 271.754C1022.18 138.586 1081.54 32.9271 1372.92 1.42167e-06L1440 0V906H0Z" fill="url(#paint0_linear_7_625)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1440 50.3134C1240.79 90.6899 1013.87 164.699 845.5 249.5C786.738 279.096 736.522 309.446 688.757 338.314C519.191 440.796 380.508 524.614 5.83891e-06 489.802L7.94918e-05 2.03386e-05L1440 3.94552e-05L1440 50.3134Z" fill="#F8E5B0"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear_7_625" x1="720" y1="0" x2="720" y2="906" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F99CBD"/>
-<stop offset="0.6" stop-color="#F99CBD" stop-opacity="0.2"/>
-<stop offset="0.7" stop-color="#F99CBD" stop-opacity="0"/>
-</linearGradient>
-<clipPath id="clip0_7_625">
-<rect width="1440" height="906" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="906" fill="none"><g fill-rule="evenodd" clip-path="url(#a)" clip-rule="evenodd"><path fill="url(#b)" d="M0 906c217.4-76.8 622.4-247.7 799.6-426.5 71.6-72.2 111.5-143.2 147.8-207.7C1022.2 138.6 1081.5 32.9 1372.9 0h67.1v906H0Z"/><path fill="#F8E5B0" d="M1440 50.3c-199.2 40.4-426.1 114.4-594.5 199.2-58.8 29.6-109 60-156.7 88.8C519.2 440.8 380.5 524.6 0 489.8V0h1440v50.3Z"/></g><defs><linearGradient id="b" x1="720" x2="720" y1="0" y2="906" gradientUnits="userSpaceOnUse"><stop stop-color="#F99CBD"/><stop offset=".6" stop-color="#F99CBD" stop-opacity=".2"/><stop offset=".7" stop-color="#F99CBD" stop-opacity="0"/></linearGradient><clipPath id="a"><path fill="#fff" d="M0 0h1440v906H0z"/></clipPath></defs></svg>
