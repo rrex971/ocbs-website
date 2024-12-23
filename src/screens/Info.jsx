@@ -18,7 +18,7 @@ const Info = () => {
         </div>
       </div>
       <div className='imagecontainer pt-8 lg:pt-0'>
-          <img src='placeholder.png' alt='Placeholder Images' width='500'></img>
+          <img src='infoimage.png' alt='Placeholder Images' width='650'></img>
         </div>
     </div>
   </div>
