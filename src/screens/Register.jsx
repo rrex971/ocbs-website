@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import RegisterButton from "../components/RegisterButton";
 import { useNavigate } from "react-router-dom";
 
@@ -6,6 +6,16 @@ const Register = () => {
     const navigate = useNavigate();
     const [phoneNumber, setPhoneNumber] = useState("");
     const [discordUsername, setDiscordUsername] = useState("");
+
+    useEffect(() => {
+        const checkLoggedIn = async () => {
+            const api_id = localStorage.getItem('api_id');
+            if (!api_id) {
+                navigate('/');
+            }
+        }
+        checkLoggedIn();
+    })
     const handleLogout = () => {
         localStorage.removeItem('api_id');
         localStorage.removeItem('username');
