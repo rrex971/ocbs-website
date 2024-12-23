@@ -1,13 +1,15 @@
 import React from "react";
 import RegisterButton from "../components/RegisterButton";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FaCheckCircle, FaClock } from "react-icons/fa";
 import LoadingScreen from "./LoadingScreen";
 import transition from "../transition";
+import OutlineButton from "../components/OutlineButton";
 const PaymentConfirmation = () => {
     const [paymentStatus, setPaymentStatus] = useState(false);
     const [loading, setLoading] = useState(true);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchPaymentStatus = async () => {
             const userId = localStorage.getItem('userId');
@@ -17,6 +19,8 @@ const PaymentConfirmation = () => {
                 if (response.ok) {
                     console.log('Payment status:', result);
                     setPaymentStatus(result);
+                } else if (response.status === 404) {
+                    navigate('/');
                 } else {
                     console.error('Failed to fetch payment status:', response.statusText);
                 }
@@ -45,6 +49,7 @@ const PaymentConfirmation = () => {
                 {paymentStatus ? "Your payment has been confirmed. Thanks for registering!" : "Your payment is pending confirmation. Please check back within 24 hours to see if it has been approved, or contact the admin rrex in the Discord server for any payment-related issues."}
             </div>
             <RegisterButton message="Return Home " path="/"/>
+            {paymentStatus ? "" :  <OutlineButton message="Go to UPI QR code " path="/register/payment"/> }
         </div>
     );
 };
