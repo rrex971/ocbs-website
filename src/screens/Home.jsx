@@ -105,6 +105,16 @@ const Home = () => {
       </div>
         <div className="galleryImages mt-16 mb-72 flex flex-col justify-between items-center">
           <img src={"checklater.svg"} alt="The event has not yet concluded. Check back later." className='max-w-xl md:max-w-full'/>
+      <div className="gallerycontainer mx-auto mt-12 lg:mt-48 px-6 sm:px-12 md:px-48 h-full justify-between items-center bg-no-repeat bg-cover min-h-96">
+        <div className="galleryText font-head text-left lg:text-left">
+          <span className="text-3xl sm:text-4xl md:text-6xl text-banana-mania-100">Gallery</span>
+        </div>
+        <div className="galleryImages mt-36 sm:mt-16 mb-24 flex flex-col justify-center items-center">
+          <img
+            src={"checklater.svg"}
+            alt="The event has not yet concluded. Check back later."
+            className="max-w-full h-auto  "
+          />  
         </div>
       </div>
     </div>
