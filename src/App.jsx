@@ -25,7 +25,10 @@ const App = () => {
           <Routes location={location} key={location.pathname}>
             <Route path="/" element={<Home />} />
             <Route path="/info" element={<Info />} />
-            <Route path="/mappools" element={<Mappools />} />
+            <Route path="/mappools" element={<Mappools stage={0}/>} />
+            <Route path="/mappools/qualifiers" element={<Mappools stage={0}/>} />
+            <Route path="/mappools/grandfinals" element={<Mappools stage={1}/>} />
+            <Route path="/mappools/testing" element={<Mappools stage={2}/>} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/register" element={<Register />} />
             <Route path="/register/payment" element={<Payment />} />

@@ -104,7 +104,7 @@ const Home = () => {
           <span className="text-4xl md:text-6xl text-banana-mania-100">Gallery</span>
       </div>
         <div className="galleryImages mt-16 mb-72 flex flex-col justify-between items-center">
-          <img src={"checklater.svg"} alt="The event has not yet concluded. Check back later." />
+          <img src={"checklater.svg"} alt="The event has not yet concluded. Check back later." className='max-w-xl md:max-w-full'/>
         </div>
       </div>
     </div>
