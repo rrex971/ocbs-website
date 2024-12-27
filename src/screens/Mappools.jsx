@@ -32,7 +32,7 @@ const Mappools = (props) => {
   
   return (
     <div className='h-full'>
-      <div className='bg-logan-500 bg-register-bg bg-cover'>
+      <div className='bg-logan-500 bg-register-bg bg-no-repeat bg-contain min-h-screen'>
         <div className="flex justify-between items-center pt-24 mx-32 space-x-8 font-head text-4xl text-logan-700">
           <div>{stage} Mappool</div>
           <button className='rounded-full bg-logan-600 hover:bg-logan-700 text-white-50 font-body font-extrabold text-xl mt-4 px-8 py-4 transition-colors duration-300'>ZIP</button>
