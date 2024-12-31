@@ -37,63 +37,64 @@ const PoolMap = (props) => {
     }
 
     return (
-        <div className={`flex flex-col sm:flex-row hover:cursor-pointer justify-between items-center w-full my-4 transform sm:h-40 bg-white-50 rounded-xl`}>
-            <div
-                style={{
-                    backgroundImage: `linear-gradient(to right, ${bgcol}, transparent), url(${data.bg})`,
-                    backgroundSize: 'cover'
-                }}
-                className="bg-cover bg-center w-full sm:w-1/3 rounded-xl my-4 font-body font-extrabold text-4xl sm:text-6xl text-left text-white-50 p-4 flex items-end h-48 sm:h-full transform -translate-y-5 sm:translate-y-0"
-                onClick={() => { window.location.href = data.link }}
-                >
-                {data.pick}
-            </div>
+        <a href={data.link} target='_blank'>
+            <div className={`flex flex-col 2xl:flex-row hover:cursor-pointer justify-between items-center w-full my-4 transform 2xl:h-40 bg-white-50 rounded-xl`}>
+                <div
+                    style={{
+                        backgroundImage: `linear-gradient(to right, ${bgcol}, transparent), url(${data.bg})`,
+                        backgroundSize: 'cover'
+                    }}
+                    className="bg-cover bg-center w-full 2xl:w-1/3 rounded-xl my-4 font-body font-extrabold text-4xl 2xl:text-6xl text-left text-white-50 p-4 flex items-end h-48 2xl:h-full transform -translate-y-5 2xl:translate-y-0"
+                    >
+                    {data.pick}
+                </div>
 
 
-            <div className="content flex flex-col sm:flex-row w-full justify-between items-center font-body font-bold text-logan-700" onClick={() => { window.location.href = data.link }}>
-                <div className="titleinfo flex-col px-4 mb-4 sm:mb-0">
-                    <div className="font-extrabold text-white-900 text-2xl sm:text-4xl">{data.title}</div>
-                    <div style={{ color: `${bgcol}` }} className="text-xl sm:text-2xl italic">{data.artist}</div>
-                    <div className="text-white-900 mt-4">
-                        <span style={{ color: `${bgcol}` }}>Mapper:</span> {data.creator}
+                <div className="content flex flex-col pb-4 2xl:pb-0 2xl:flex-row w-full justify-between items-start 2xl:items-center font-body font-bold text-logan-700">
+                    <div className="titleinfo flex-col px-4 mb-4 2xl:mb-0">
+                        <div className="font-extrabold text-white-900 text-2xl 2xl:text-4xl">{data.title}</div>
+                        <div style={{ color: `${bgcol}` }} className="text-xl 2xl:text-2xl italic">{data.artist}</div>
+                        <div className="text-white-900 mt-4">
+                            <span style={{ color: `${bgcol}` }}>Mapper:</span> {data.creator}
+                        </div>
+                        <div className="text-white-900">
+                            <span style={{ color: `${bgcol}` }}>Difficulty:</span> {data.diff}
+                        </div>
                     </div>
-                    <div className="text-white-900">
-                        <span style={{ color: `${bgcol}` }}>Difficulty:</span> {data.diff}
+                    <div className="flex text-lg 2xl:text-2xl justify-between items-center align-middle w-full 2xl:w-1/3">
+                        <div className="mapinfo flex-col w-1/2 space-y-2 grow-0 px-4">
+                            <div className="flex items-center space-x-2">
+                                <PiClockBold style={{ color: `${bgcol}` }} />
+                                <span className="font-normal text-white-900">{data.length}</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <PiStarBold style={{ color: `${bgcol}` }} />
+                                <span className="font-normal text-white-900">{data.sr}</span>
+                            </div>
+                            <div className="flex items-center space-x-2">
+                                <PiMetronomeBold style={{ color: `${bgcol}` }} />
+                                <span className="font-normal text-white-900">{data.bpm}</span>
+                            </div>
+                        </div>
+
+                        <div className="mapstats flex-col w-1/2 grow-0 px-4">
+                            <div style={{ color: `${bgcol}` }}>
+                                AR <span className="font-normal text-white-900">{data.ar}</span>
+                            </div>
+                            <div style={{ color: `${bgcol}` }}>
+                                OD <span className="font-normal text-white-900">{data.od}</span>
+                            </div>
+                            <div style={{ color: `${bgcol}` }}>
+                                CS <span className="font-normal text-white-900">{data.cs}</span>
+                            </div>
+                            <div style={{ color: `${bgcol}` }}>
+                                HP <span className="font-normal text-white-900">{data.hp}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="flex text-lg sm:text-2xl justify-between items-center align-middle w-full sm:w-1/3">
-                    <div className="mapinfo flex-col w-1/2 space-y-2 grow-0 px-4">
-                        <div className="flex items-center space-x-2">
-                            <PiClockBold style={{ color: `${bgcol}` }} />
-                            <span className="font-normal text-white-900">{data.length}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <PiStarBold style={{ color: `${bgcol}` }} />
-                            <span className="font-normal text-white-900">{data.sr}</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                            <PiMetronomeBold style={{ color: `${bgcol}` }} />
-                            <span className="font-normal text-white-900">{data.bpm}</span>
-                        </div>
-                    </div>
-
-                    <div className="mapstats flex-col w-1/2 grow-0 px-4">
-                        <div style={{ color: `${bgcol}` }}>
-                            AR <span className="font-normal text-white-900">{data.ar}</span>
-                        </div>
-                        <div style={{ color: `${bgcol}` }}>
-                            OD <span className="font-normal text-white-900">{data.od}</span>
-                        </div>
-                        <div style={{ color: `${bgcol}` }}>
-                            CS <span className="font-normal text-white-900">{data.cs}</span>
-                        </div>
-                        <div style={{ color: `${bgcol}` }}>
-                            HP <span className="font-normal text-white-900">{data.hp}</span>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
+        </a>
     );
 };
 
