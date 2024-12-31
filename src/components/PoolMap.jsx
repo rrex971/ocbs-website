@@ -37,7 +37,7 @@ const PoolMap = (props) => {
     }
 
     return (
-        <div className={`flex flex-col sm:flex-row justify-between items-center w-full my-4 transform sm:h-40 bg-white-50 rounded-xl`}>
+        <div className={`flex flex-col sm:flex-row hover:cursor-pointer justify-between items-center w-full my-4 transform sm:h-40 bg-white-50 rounded-xl`}>
             <div
                 style={{
                     backgroundImage: `linear-gradient(to right, ${bgcol}, transparent), url(${data.bg})`,
