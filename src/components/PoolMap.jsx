@@ -27,8 +27,8 @@ const PoolMap = (props) => {
             twcol = 'lilac-800';
             break;
         case "TB":
-            bgcol = theme.colors.white[300];
-            twcol = 'white-300';
+            bgcol = theme.colors.white[700];
+            twcol = 'white-700';
             break;
         default:
             bgcol = theme.colors.white[50];
@@ -44,15 +44,15 @@ const PoolMap = (props) => {
                         backgroundImage: `linear-gradient(to right, ${bgcol}, transparent), url(${data.bg})`,
                         backgroundSize: 'cover'
                     }}
-                    className="bg-cover bg-center w-full 2xl:w-1/3 rounded-xl my-4 font-body font-extrabold text-4xl 2xl:text-6xl text-left text-white-50 p-4 flex items-end h-48 2xl:h-full transform -translate-y-5 2xl:translate-y-0"
+                    className="bg-cover shrink-0 bg-center w-full 2xl:w-1/3 rounded-xl my-4 font-body font-extrabold text-4xl 2xl:text-6xl text-left text-white-50 p-4 flex items-end h-48 2xl:h-full transform -translate-y-5 2xl:translate-y-0"
                     >
                     {data.pick}
                 </div>
 
 
-                <div className="content flex flex-col pb-4 2xl:pb-0 2xl:flex-row w-full justify-between items-start 2xl:items-center font-body font-bold text-logan-700">
-                    <div className="titleinfo flex-col px-4 mb-4 2xl:mb-0">
-                        <div className="font-extrabold text-white-900 text-2xl 2xl:text-4xl">{data.title}</div>
+                <div className="content flex min-w-0 flex-col pb-4 2xl:pb-0 2xl:flex-row w-full justify-between items-start 2xl:items-center font-body font-bold text-logan-700">
+                    <div className="titleinfo flex-col min-w-0 shrink px-4 mb-4 2xl:mb-0">
+                        <div className="truncate font-extrabold grow-0 text-white-900 text-2xl 2xl:text-4xl pb-2 ">{data.title}</div>
                         <div style={{ color: `${bgcol}` }} className="text-xl 2xl:text-2xl italic">{data.artist}</div>
                         <div className="text-white-900 mt-4">
                             <span style={{ color: `${bgcol}` }}>Mapper:</span> {data.creator}
@@ -61,8 +61,8 @@ const PoolMap = (props) => {
                             <span style={{ color: `${bgcol}` }}>Difficulty:</span> {data.diff}
                         </div>
                     </div>
-                    <div className="flex text-lg 2xl:text-2xl justify-between items-center align-middle w-full 2xl:w-1/3">
-                        <div className="mapinfo flex-col w-1/2 space-y-2 grow-0 px-4">
+                    <div className="flex shrink-0 text-lg 2xl:text-2xl justify-between items-center align-middle w-full 2xl:w-1/3">
+                        <div className="mapinfo flex-col w-1/2 space-y-2 px-4">
                             <div className="flex items-center space-x-2">
                                 <PiClockBold style={{ color: `${bgcol}` }} />
                                 <span className="font-normal text-white-900">{data.length}</span>
@@ -77,7 +77,7 @@ const PoolMap = (props) => {
                             </div>
                         </div>
 
-                        <div className="mapstats flex-col w-1/2 grow-0 px-4">
+                        <div className="mapstats flex-col w-1/2 px-4">
                             <div style={{ color: `${bgcol}` }}>
                                 AR <span className="font-normal text-white-900">{data.ar}</span>
                             </div>
