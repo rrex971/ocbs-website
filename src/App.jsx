@@ -18,7 +18,7 @@ import { AnimatePresence } from 'framer-motion';
 const App = () => {
   const location = useLocation();
   return (
-      <div className='bg-logan-500 text-logan-900'>
+      <div className='flex-col min-h-lvh bg-logan-500 text-logan-900'>
         <Navbar />
         <ToastContainer />
         <AnimatePresence mode="wait">
@@ -38,7 +38,7 @@ const App = () => {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
-        <Footer />
+        <Footer className="flex-end"/>
       </div>
   );
 };
