@@ -4,9 +4,9 @@ const Player = (props) => {
     return (
         <div className="w-full sm:w-auto bg-logan-600 hover:scale-105 ease-in-out transition-all duration-300 rounded-3xl mt-4">
             <a href={`https://osu.ppy.sh/users/${props.id}`} target="_blank" rel="noopener noreferrer">
-                <div className="flex justify-center items-center space-x-2 px-8 py-4">
+                <div className="flex justify-space-between md:justify-center items-center space-x-2 px-8 py-4">
                     <img src={"https://a.ppy.sh/" + props.id} className="rounded-full" alt="User Avatar" width={100} />
-                    <div className="flex-col font-body text-logan-700 text-2xl">
+                    <div className="flex-col font-body text-logan-700 text-lg md:text-2xl">
                         <div className="flex items-center">
                             <p className="font-bold ml-6 font-head text-banana-mania-100">{props.username}</p>
                         </div>

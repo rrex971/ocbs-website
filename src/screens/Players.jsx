@@ -34,12 +34,12 @@ const Players = () => {
   }
 
   return (
-    <div className="bg-register-bg bg-left-top bg-cover min-h-screen px-4 sm:px-6 lg:px-12">
+    <div className="bg-logan-500 bg-register-bg bg-left-top bg-no-repeat bg-contain min-h-lvh px-4 sm:px-6 lg:px-12">
       <div className="flex justify-center items-center pt-12 sm:pt-16 font-head text-2xl sm:text-3xl lg:text-4xl text-logan-700">
         Registered Players
       </div>
 
-      <div className="mt-8 max-h-[80vh] overflow-y-auto flex flex-wrap justify-center items-center gap-6">
+      <div className="mt-8 overflow-y-visible h-fit flex flex-wrap justify-center items-center gap-0 2xl:gap-4">
         {registrations.map((registration) => (
           <Player
             key={registration.userId}
