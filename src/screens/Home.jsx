@@ -34,7 +34,7 @@ const Home = () => {
     return <LoadingScreen />;
   }
   return (
-    <div className="bg-logan-500 bg-home-bg bg-right-top bg-no-repeat md:bg-left-top md:bg-cover md:min-h-lvh">
+    <div className="flex-col bg-logan-500 bg-home-bg bg-right-top bg-no-repeat md:bg-left-top md:bg-cover md:min-h-lvh">
       <div className="titlecontainer pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center">
         <div className="titletext">
           <div className="titlecontent font-head pt-20 pb-5">
@@ -67,6 +67,11 @@ const Home = () => {
             , hosted by <span className="text-banana-mania-100 font-bold italic">Raybean&nbsp;</span>
             and <span className="text-banana-mania-100 font-bold italic">rrex</span>.
             The event will be a part of the largest osu! meetup in the city.
+            <br />
+            <br />
+            <span className="font-regular italic text-sm md:text-lg text-banana-mania-100">
+            <span className='font-bold text-white-50 not-italic'>Venue:</span> LXG Nungambakkam, 1st Floor, Fortuna Towers, No. 1, 1, Kodambakkam High Rd, Tirumurthy Nagar, Nungamakkam, Chennai, Tamil Nadu 600034
+            </span>
           </div>
           <button className="rounded-full bg-banana-mania-100 hover:bg-banana-mania-50 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 transition-colors duration-300 ease-in-out" onClick={() => {
             if (registered) {
@@ -104,15 +109,14 @@ const Home = () => {
         <div className="galleryText font-head text-left lg:text-left">
           <span className="text-3xl sm:text-4xl md:text-6xl text-banana-mania-100">Gallery</span>
         </div>
-        <div className="galleryImages mt-36 sm:mt-16 mb-48 flex flex-col justify-center items-center">
-          <div className="image-wrapper ">
+        <div className="galleryImages mt-36 sm:mt-16 mb-96 flex flex-col justify-center items-center">
+          <div className="image-wrapper block h-full">
             <img
               src={"checklater.svg"}
               alt="The event has not yet concluded. Check back later."
               className="max-w-full h-full"
             />
           </div>
-          <div className="spacerdiv"></div>
         </div>
       </div>
     </div>
