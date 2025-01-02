@@ -1,6 +1,7 @@
 import { React, useState } from "react";
 import PoolMap from "./PoolMap";
 import { FaChevronDown } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const PoolCategory = (props) => {
     const [open, setOpen] = useState(false);
@@ -21,16 +22,20 @@ const PoolCategory = (props) => {
                     </button>
                 </div>
 
-                {open && (
-                    <div className="mapsContainer mt-4 sm:mt-6 px-4 sm:px-6 w-full">
-                        {props.mappools.map((map) => (
-                            <PoolMap key={map.id} data={map} pick={props.pick} />
-                        ))}
-                    </div>
-                )}
+                <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden mapsContainer px-4 sm:px-6 w-full"
+                >
+                    {props.mappools.map((map) => (
+                        <PoolMap key={map.id} data={map} pick={props.pick} />
+                    ))}
+                </motion.div>
             </div>
         </>
     );
 };
 
 export default PoolCategory;
+
