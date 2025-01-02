@@ -38,7 +38,7 @@ const Mappools = (props) => {
         <div className="flex flex-col 2xl:flex-row justify-between items-center pt-24 px-4 2xl:px-32 space-y-4 2xl:space-y-0 2xl:space-x-8 font-head text-4xl text-logan-700">
           <div className="2xl:mt-0 -mt-16 lg">{stage} Mappool</div>
 
-          <button className="rounded-full bg-logan-600 hover:bg-logan-700 text-white-50 font-body font-extrabold text-xl mt-auto sm:mt-0 px-8 py-4 transition-colors duration-300">
+          <button className="cursor-not-allowed rounded-full bg-logan-200 text-white-50 font-body font-extrabold text-xl mt-auto sm:mt-0 px-8 py-4 transition-colors duration-300">
             ZIP
           </button>
         </div>
