@@ -51,10 +51,11 @@ const Mappools = (props) => {
         </div>
         <div className="flex flex-col 2xl:flex-row justify-between items-center pt-12 px-4 2xl:px-32 space-y-4 2xl:space-y-0 2xl:space-x-8 font-head text-4xl text-logan-700">
           <div className="2xl:mt-0 -mt-16 lg">{stage} Mappool</div>
-
-          <button className="cursor-not-allowed rounded-full bg-logan-200 text-white-50 font-body font-extrabold text-xl mt-auto sm:mt-0 px-8 py-4 transition-colors duration-300">
-            ZIP
-          </button>
+          <a href= {`https://ocbs.rrex.cc/api/mappacks?stage=${props.stage}`} className="2xl:mt-0 mt-8 lg">
+            <button className="rounded-full bg-logan-700 hover:bg-logan-500 text-white-50 font-body font-extrabold text-xl mt-auto sm:mt-0 px-8 py-4 transition-colors duration-300">
+              ZIP
+            </button>
+          </a>
         </div>
 
         <div className="flex flex-col justify-center items-center px-4 sm:px-16 my-4">
