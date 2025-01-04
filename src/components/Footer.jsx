@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="lg:transform translate-y-48">
-          <nav className="bg-logan-500 bg-cover mt-12 md:mt-64 p-6 md:p-16 rounded-b-xl">
+          <nav className="bg-logan-500 bg-cover mt-12 md:mt-64 p-6 md:p-16">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
               <div className="text-banana-mania-100 text-sm md:text-2xl font-body mb-4 md:mb-0">
                 <span className="font-head block">
