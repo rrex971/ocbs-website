@@ -19,7 +19,7 @@ const Rules = () => {
                 </p>
                 <h2 className="text-3xl font-semibold">Match Guide:</h2>
                 <p>
-                    Players will be sorted into qualifier lobbies based on seeding (the number of lobbies will depend on the number of players). Each player will have two (2) lives, and the remaining 3 players from each lobby will advance to the Grand Finals. The lobby ends when there are 3 players left, regardless of lives remaining.
+                    Each player will have two (2) lives, and the remaining 3 players from each lobby will advance to the Grand Finals. The lobby ends when there are 3 players left, regardless of lives remaining.
                 </p>
                 <p>
                     The remaining players will play in a Grand Finals Battle Royale lobby. Each player will have two (2) lives, and the match will continue until there are 2 players left. The match will continue until there is only 1 player left standing. In the case where there are 2 players left with 1 life, the Tiebreaker will be played.
