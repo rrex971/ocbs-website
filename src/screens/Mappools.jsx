@@ -49,7 +49,7 @@ const Mappools = (props) => {
             Grand Finals
           </NavLink>
         </div>
-        <div className="flex flex-col 2xl:flex-row justify-between items-center pt-12 px-4 2xl:px-32 space-y-4 2xl:space-y-0 2xl:space-x-8 font-head text-4xl text-logan-700">
+        <div className="flex flex-col 2xl:flex-row justify-between items-center pt-12 2xl:px-32 space-y-4 2xl:space-y-0 2xl:space-x-8 font-head text-4xl text-logan-700">
           <div className="2xl:mt-0 -mt-16 lg">{stage} Mappool</div>
           <a href= {`https://ocbs.rrex.cc/api/mappacks?stage=${props.stage}`} className="2xl:mt-0 mt-8 lg">
             <button className="rounded-full bg-logan-700 hover:bg-logan-500 text-white-50 font-body font-extrabold text-xl mt-auto sm:mt-0 px-8 py-4 transition-colors duration-300">
@@ -58,7 +58,7 @@ const Mappools = (props) => {
           </a>
         </div>
 
-        <div className="flex flex-col justify-center items-center px-4 sm:px-16 my-4">
+        <div className="flex flex-col justify-center items-center px-2 2xl:px-8 my-4">
           <PoolCategory pick="NM" text="NO MOD" bgcolor="bg-logan-600" mappools={mappools.NM} />
           <PoolCategory pick="HD" text="HIDDEN" bgcolor="bg-banana-mania-300" mappools={mappools.HD} />
           <PoolCategory pick="HR" text="HARD ROCK" bgcolor="bg-carnation-pink-400" mappools={mappools.HR} />

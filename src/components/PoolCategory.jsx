@@ -26,7 +26,7 @@ const PoolCategory = (props) => {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
                     transition={{ duration: 0.3 }}
-                    className="overflow-hidden mapsContainer px-4 sm:px-6 w-full"
+                    className="overflow-hidden mapsContainer px-1 2xl:px-6 w-full"
                 >
                     {props.mappools.map((map) => (
                         <PoolMap key={map.id} data={map} pick={props.pick} />
