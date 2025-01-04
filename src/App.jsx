@@ -9,11 +9,13 @@ import Footer from './components/Footer';
 import Register from './screens/Register';
 import Login from './screens/Login';
 import Players from './screens/Players';
+import Rules from './screens/Rules';
 import Payment from './screens/Payment';
 import PaymentConfirmation from './screens/PaymentConfirmation';
 import NotFound from './screens/NotFound';
 import { ToastContainer } from 'react-toastify';
 import { AnimatePresence } from 'framer-motion';
+
 
 const App = () => {
   const location = useLocation();
@@ -30,6 +32,7 @@ const App = () => {
             <Route path="/mappools/grandfinals" element={<Mappools stage={1}/>} />
             <Route path="/mappools/testing" element={<Mappools stage={2}/>} />
             <Route path="/staff" element={<Staff />} />
+            <Route path="/rules" element={<Rules />} />
             <Route path="/register" element={<Register />} />
             <Route path="/register/payment" element={<Payment />} />
             <Route path="/register/payment/confirmation" element={<PaymentConfirmation />} />

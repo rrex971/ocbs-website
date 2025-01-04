@@ -58,6 +58,18 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
+              to="/rules"
+              className={({ isActive }) =>
+                isActive
+                  ? 'text-banana-mania-100 opacity-100'
+                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
+              }
+            >
+              Rules
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/mappools"
               className={({ isActive }) =>
                 isActive
