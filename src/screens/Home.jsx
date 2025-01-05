@@ -34,7 +34,7 @@ const Home = () => {
     return <LoadingScreen />;
   }
   return (
-    <div className="flex-col bg-logan-500 bg-home-bg bg-right-top bg-no-repeat md:bg-left-top md:bg-cover md:min-h-lvh">
+  <div className="flex-col bg-logan-500 bg-home-bg bg-right-top bg-no-repeat md:bg-left-top md:bg-cover md:min-h-lvh">
       <div className="titlecontainer pt-8 md:pt-24 px-12 md:px-48 flex flex-col lg:flex-row justify-between items-center">
         <div className="titletext">
           <div className="titlecontent font-head pt-20 pb-5">
@@ -70,42 +70,40 @@ const Home = () => {
             <br />
             <br />
             <span className="font-regular italic text-sm md:text-lg text-banana-mania-100">
-            <span className='font-bold text-white-50 not-italic'>Venue:</span> LXG Nungambakkam, 1st Floor, Fortuna Towers, No. 1, 1, Kodambakkam High Rd, Tirumurthy Nagar, Nungamakkam, Chennai, Tamil Nadu 600034
+              <span className='font-bold text-white-50 not-italic'>Venue:</span> LXG Nungambakkam, 1st Floor, Fortuna Towers, No. 1, 1, Kodambakkam High Rd, Tirumurthy Nagar, Nungamakkam, Chennai, Tamil Nadu 600034
             </span>
           </div>
-          <button className="rounded-full bg-banana-mania-100 hover:bg-banana-mania-50 text-logan-700 font-body font-medium text-xl mt-4 px-12 py-4 transition-colors duration-300 ease-in-out" onClick={() => {
-            if (registered) {
-              navigate('/register/payment/confirmation');
-            } else if (localStorage.getItem('api_id')) {
-              navigate('/register');
-            } else {
-              toast(
-                <div className="font-body font-medium text-lg text-logan-700 bg-banana-mania-100 rounded-full p-4 flex items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                  </svg>
-                  <span>Please login first to register</span>
-                </div>,
-                {
-                  position: "top-right",
-                  closeButton: false,
-                  autoClose: 2000,
-                  hideProgressBar: true,
-                  closeOnClick: true,
-                  pauseOnHover: false,
-                  draggable: true,
-                  className: "p-0 rounded-full bg-banana-mania-100",
-                  transition: Slide,
-                }
-              );
+          <button className="disabled cursor-not-allowed rounded-full bg-white-300 text-white-500 font-body font-medium text-xl mt-4 px-12 py-4 transition-colors duration-300 ease-in-out" onClick={() => {
+            /*if (registered) {
+          navigate('/register/payment/confirmation');
+        } else if (localStorage.getItem('api_id')) {
+          navigate('/register');
+        } else {
+          toast(
+            <div className="font-body font-medium text-lg text-logan-700 bg-banana-mania-100 rounded-full p-4 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+              </svg>
+              <span>Please login first to register</span>
+            </div>,
+            {
+              position: "top-right",
+              closeButton: false,
+              autoClose: 2000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              className: "p-0 rounded-full bg-banana-mania-100",
+              transition: Slide,
             }
+          );
+        }*/
           }}>
-            {registered ? "Check registration payment status" : "Register"} <FaArrowRight className="inline relative -top-0.5" />
-          </button>
-        </div>
+          Event concluded. Registrations closed.
+        </button>
       </div>
-
-      <div className="gallerycontainer flex-col mx-auto mt-12 lg:mt-48 px-6 sm:px-12 md:px-48 h-full justify-between items-center min-h-96">
+    </div><div className="gallerycontainer flex-col mx-auto mt-12 lg:mt-48 px-6 sm:px-12 md:px-48 h-full justify-between items-center min-h-96">
         <div className="galleryText font-head text-left lg:text-left">
           <span className="text-3xl sm:text-4xl md:text-6xl text-banana-mania-100">Gallery</span>
         </div>
@@ -114,8 +112,7 @@ const Home = () => {
             <img
               src={"checklater.svg"}
               alt="The event has not yet concluded. Check back later."
-              className="max-w-full h-full"
-            />
+              className="max-w-full h-full" />
           </div>
         </div>
       </div>

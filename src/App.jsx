@@ -33,9 +33,9 @@ const App = () => {
             <Route path="/mappools/testing" element={<Mappools stage={2}/>} />
             <Route path="/staff" element={<Staff />} />
             <Route path="/rules" element={<Rules />} />
-            <Route path="/register" element={<Register />} />
+            {/*<Route path="/register" element={<Register />} />
             <Route path="/register/payment" element={<Payment />} />
-            <Route path="/register/payment/confirmation" element={<PaymentConfirmation />} />
+            <Route path="/register/payment/confirmation" element={<PaymentConfirmation />} />*/}
             <Route path="/players" element={<Players />} />
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
