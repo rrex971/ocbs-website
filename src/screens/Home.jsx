@@ -108,11 +108,16 @@ const Home = () => {
           <span className="text-3xl sm:text-4xl md:text-6xl text-banana-mania-100">Gallery</span>
         </div>
         <div className="galleryImages mt-36 sm:mt-16 mb-96 flex flex-col justify-center items-center">
-          <div className="image-wrapper block h-full">
+          <div className="image-wrapper flex-col justify-center h-full">
+          <a href="https://www.reddit.com/r/osugame/comments/1hvp49j/osuchennai_beachside_showdown_lan_tournament/" target="_blank">
             <img
-              src={"checklater.svg"}
+              src={"image.png"}
               alt="The event has not yet concluded. Check back later."
-              className="max-w-full h-full" />
+              className="max-w-full h-full rounded-3xl" />
+            </a>
+            <div className='flex justify-center font-head text-3xl mt-10'>
+              more pictures to come soon!!
+            </div>
           </div>
         </div>
       </div>
