@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import LoginButton from './LoginButton';
 
 const Navbar = () => {
@@ -9,11 +10,15 @@ const Navbar = () => {
     <nav className="bg-logan-500 bg-cover p-4 md:p-5 rounded-b-xl">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
         <div className="flex justify-between items-center w-full md:w-auto">
-          <div className="text-banana-mania-100 text-lg md:text-2xl font-head">
+          <motion.div
+            className="text-banana-mania-100 text-lg md:text-2xl font-head"
+            whileHover={{ rotate: -4, scale: 1.03 }}
+            transition={{ type: 'spring', stiffness: 200, damping: 16 }}
+          >
             <NavLink to="/" className="hover:text-banana-mania-50 transition-colors duration-300 ease-in-out">
               o!CBS
             </NavLink>
-          </div>
+          </motion.div>
 
           <div className="flex items-center md:hidden space-x-4">
             <button
@@ -42,68 +47,32 @@ const Navbar = () => {
         <ul
           className={`${
             isMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
-          } md:max-h-none md:opacity-100 transition-all duration-500 ease-in-out overflow-hidden md:flex flex-col md:flex-row md:space-x-8 space-y-3 md:space-y-0 justify-start md:justify-end items-start md:items-center text-sm md:text-lg lg:text-xl font-head text-logan-800 w-full md:w-auto mt-4 md:mt-0`}
+          } md:max-h-none md:opacity-100 transition-all duration-500 ease-out-in overflow-hidden md:flex flex-col md:flex-row md:space-x-8 space-y-3 md:space-y-0 justify-start md:justify-end items-start md:items-center text-sm md:text-lg lg:text-xl font-head text-logan-800 w-full md:w-auto mt-4 md:mt-0`}
         >
-          <li>
-            <NavLink
-              to="/info"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-banana-mania-100 opacity-100'
-                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
-              }
+          {[
+            { to: '/info', label: 'Info' },
+            { to: '/rules', label: 'Rules' },
+            { to: '/mappools', label: 'Mappools' },
+            { to: '/players', label: 'Players' },
+            { to: '/staff', label: 'Staff' },
+          ].map((item) => (
+            <motion.li
+              key={item.to}
+              whileHover={{ y: -2, scale: 1.04 }}
+              transition={{ type: 'spring', stiffness: 220, damping: 16 }}
             >
-              Info
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/rules"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-banana-mania-100 opacity-100'
-                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
-              }
-            >
-              Rules
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/mappools"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-banana-mania-100 opacity-100'
-                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
-              }
-            >
-              Mappools
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/players"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-banana-mania-100 opacity-100'
-                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
-              }
-            >
-              Players
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/staff"
-              className={({ isActive }) =>
-                isActive
-                  ? 'text-banana-mania-100 opacity-100'
-                  : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
-              }
-            >
-              Staff
-            </NavLink>
-          </li>
+              <NavLink
+                to={item.to}
+                className={({ isActive }) =>
+                  isActive
+                    ? 'text-banana-mania-100 opacity-100'
+                    : 'navbar-link opacity-50 hover:opacity-100 transition-opacity duration-300 ease-in-out'
+                }
+              >
+                {item.label}
+              </NavLink>
+            </motion.li>
+          ))}
           <li className="hidden md:block">
             <LoginButton />
           </li>

@@ -28,8 +28,8 @@ const PoolCategory = (props) => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden mapsContainer px-1 2xl:px-6 w-full"
                 >
-                    {props.mappools.map((map) => (
-                        <PoolMap key={map.id} data={map} pick={props.pick} />
+                    {props.mappools.map((map, index) => (
+                        <PoolMap key={map.id || map.pick || index} data={map} pick={props.pick} />
                     ))}
                 </motion.div>
             </div>

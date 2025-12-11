@@ -39,14 +39,22 @@ const PoolMap = (props) => {
     return (
         <a href={data.link} target='_blank'>
             <div className={`flex flex-col 2xl:flex-row hover:cursor-pointer justify-between items-center w-full my-4 transform 2xl:h-40 bg-white-50 rounded-xl`}>
-                <div
-                    style={{
-                        backgroundImage: `linear-gradient(to right, ${bgcol}, transparent), url(${data.bg})`,
-                        backgroundSize: 'cover'
-                    }}
-                    className="bg-cover shrink-0 bg-center w-full 2xl:w-1/3 rounded-xl my-4 font-body font-extrabold text-4xl 2xl:text-6xl text-left text-white-50 p-4 flex items-end h-48 2xl:h-full transform -translate-y-5 2xl:translate-y-0"
-                    >
-                    {data.pick}
+                <div className="shrink-0 w-full 2xl:w-1/3 rounded-xl my-4 relative overflow-hidden h-48 2xl:h-full transform -translate-y-5 2xl:translate-y-0">
+                    <img 
+                        src={data.bg ? data.bg.replace('raw.jpg', 'cover.jpg') : ''}
+                        className="absolute inset-0 w-full h-full object-cover object-center"
+                        alt=""
+                        onError={(e) => {
+                            e.target.style.display = 'none';
+                        }}
+                    />
+                    <div 
+                        className="absolute inset-0"
+                        style={{ background: `linear-gradient(to right, ${bgcol}, transparent)` }}
+                    />
+                    <div className="relative z-10 p-4 flex items-end w-full h-full font-body font-extrabold text-4xl 2xl:text-6xl text-left text-white-50">
+                        {data.pick}
+                    </div>
                 </div>
 
 
