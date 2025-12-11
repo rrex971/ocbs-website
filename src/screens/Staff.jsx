@@ -39,7 +39,7 @@ const Staff = () => {
   useEffect(() => {
     const fetchStaff = async () => {
       try {
-        const response = await fetch('http://localhost:6969/api/staff', {
+        const response = await fetch('https://ocbs.rrex.cc/api/staff', {
           method: 'GET',
           headers: {
             'Access-Control-Allow-Origin': '*',
