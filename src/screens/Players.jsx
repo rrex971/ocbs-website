@@ -34,7 +34,12 @@ const Players = () => {
   }
 
   return (
-    <div className="bg-logan-500 bg-register-bg bg-left-top bg-no-repeat bg-contain min-h-lvh px-4 sm:px-6 lg:px-12">
+    <div
+      className="bg-logan-500 min-h-lvh px-4 sm:px-6 lg:px-12"
+      style={{
+        backgroundImage: "linear-gradient(180deg, #f8e5b0 0%, rgba(248,229,176,0) 55%)",
+      }}
+    >
       <div className="flex justify-center items-center pt-12 sm:pt-16 font-head text-2xl sm:text-3xl lg:text-4xl text-logan-700">
         Registered Players
       </div>

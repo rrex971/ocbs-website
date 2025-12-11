@@ -34,7 +34,7 @@ const Mappools = (props) => {
 
   return (
     <div className="h-full">
-      <div className="bg-logan-500 bg-register-bg bg-no-repeat bg-contain min-h-lvh">
+      <div className="bg-logan-500 bg-register-bg bg-no-repeat bg-auto md:bg-contain min-h-lvh">
         <div className="flex justify-center items-center space-x-4 font-head text-xl md:text-3xl text-white-50 pt-12 pb-12 2xl:pb-0">
           <NavLink
             to="/mappools/qualifiers"

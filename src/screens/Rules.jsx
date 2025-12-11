@@ -3,11 +3,10 @@ import transition from "../transition";
 const Rules = () => {
     return (
         <div className="bg-logan-500 bg-gradient-to-b from-banana-mania-100 via-90% via-banana-mania-100 min-h-screen">
-            <div className="flex justify-center items-center pt-12 sm:pt-16 font-head text-2xl sm:text-3xl lg:text-4xl text-logan-700">
-                Rules
+            <div className="flex justify-center items-center pt-12 sm:pt-16 pb-12 sm:pb-16 font-head text-2xl sm:text-3xl lg:text-4xl text-logan-700">
+                Tournament Rules
             </div>    
             <div className="flex-col font-body mx-8 md:mx-32 pb-64 text-xl font-medium space-y-6">
-                <h1 className="text-4xl font-bold">Tournament Rules</h1>
                 <p>
                     All players must join the discord for the duration of the tournament. If you are not in the discord server when registering, please join the server ASAP so you do not miss on anything important. All players are expected to treat staff and other participants with a high level of respect.
                 </p>
